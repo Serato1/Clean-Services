@@ -1,0 +1,481 @@
+/*Aca estamos importando un tipo de letra , ( Poppins) desde google fonds*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*selector universal para todas las etiquetas*/
+
+*{
+    margin: 0;
+    padding: 0;
+    /*box sizing para que no se nos desborde*/
+    box-sizing: border-box;
+    /*tex-decoration: none para que quite las lineas debajo de los enlaces*/
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Creando Variables*/
+
+/*las variables sirven para almacenar los valores y asi poder llamarlos cuando necesitemos sin necesidad de volver a escribir lo que necesitamos*/
+
+/*este es el color del fondo al inicio detras de la imagen*/
+:root{
+    --color_text-primary: #ab29ca;
+    /*este es el color de los textos*/
+    --color_text-secundary: #101e2c;
+    /**/
+    --color_text-terciary: #485663;
+    /*esto es el color principal*/
+    --main_color-primary: #9a00bf;
+    /*el color secundario es el que esta en el fondo*/
+    --main_color-secundary: rgb(193, 231, 250); /* #f4d4fb  color rosado que venia en la pag */
+    /*es el color del fondo de la segunda parte de la pag*/
+    --background-color: #fafbfe;
+    /*tamaño de texto mas bajo*/
+    --lowText_font_size: 16px;
+    /*es el tamaño del texto principal*/
+    --text_size_title: 40px;
+    /*este es el titulo de las cartas*/
+    --text_title_card: 24px;
+    /*este es el de las cartas numero 2*/
+    --text_title_cardv2:20px;
+    /*es el texto de los parrafos en las cartas*/
+    --text_paragraph: 16px;
+    /*es para cuando pasemos el cursos por las cartas, se produzca un efecto*/
+    --box_shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2)
+}
+
+header{
+    width: 100%;
+    /*el height es la distancia que hay desde el comienzo de la pagina, hasta el recuadro del logo y menus*/
+    height: 100px;
+    /*Posicion fixed para que se ponga por encima de todo*/
+    position: fixed;
+    /*z-index de 100 para asegurarnos que este por encima de todo*/
+    z-index: 1000;
+    background: rgba(255,255, 255,0.9);/*CHATGPT*/
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*CHATGPT*/
+    transition: background 0.3s, padding 0.3s; /*CHATGPT*/
+}
+
+header.scroller{ /*CHATGPT*/
+    background: rgba(0,0,0,0.8); /*CHATGPT*/
+    color: white; /*CHATGPT*/
+    padding: 0px 20px; /*CHATGPT*/
+}
+
+/*el container header es para asegurarnos que la pagina se vea mas ordenada */
+
+.container__header{
+    /*el ancho max de la pagina */
+    max-width: 1200px;
+    /*esto para que se adapte al ancho de su padre que esta en el header arriba*/
+    height: 100%;
+    /*margin auto para que se mantenga centrado*/
+    margin: auto;
+    /*esto de display flex es para que logo este del lado izquierdo y las opciones del derecho*/
+    display: flex;
+    /*esto es para que cada elemento del container (logo, items, social media ) se acomoden automaticamente*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 20px;
+}
+
+/*este es el contenedor del logo*/
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    /*esto es lo del logo escrito mientras se consigue el buen logo*/
+    text-align: center;
+    font-size: 35px;
+}
+
+/*aca estamos trabajando directamente con la imagen del logo*/
+
+.logo img{
+    width: 200px;
+}
+
+/*Opciones del menu*/
+
+.menu{
+    /*display flex para que las opciones se pongan una al lado de la otra*/
+    display: flex;
+    /*esto es para que todo el contenido permanezca centrado en base al logo*/
+    align-items: center;
+}
+
+.menu nav{
+    /*0 pixeles arriba y abajo y 20 de los lados*/
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+/*esto es para quitarle los puntos al apartado de lista o items */
+.menu nav ul li{
+    list-style: none;
+    /*este margin es para separar las opciones, una de otra*/
+    margin: 20px 16px;
+}
+
+/*la etiqueta a es la de link , aca vamos a cambiar el color de los items porque por defecto vienen en morado como un link*/
+.menu nav ul li a{
+    color: var(--color_text-secundary); /*Variable*/
+    font-size: var(--lowText_font_size); /*Variable*/
+    position: relative; 
+}
+
+/*CHATGPT*/
+.menu.scrolled nav ul li a{/*CHATGPT*/
+    color: white;/*CHATGPT*/
+}
+
+/*Esto es para cuando pasemos el cursor se coloque de otro color, por encima */
+.menu nav ul li a:hover{
+    color: var(--color_text-primary); /*Variable*/
+}
+
+/*Boton Cotizar*/
+
+.btn_quote{
+    /*lo convertimos en un bloque porque tiene la etiqueta a, esto para que resalte que es un boton*/
+    display: block;
+    padding: 8px 40px;
+    /*para crear la linea de bloque , que parezca un recuadro hacemos lo siguiente*/
+    border: 2px solid var(--main_color-primary); /*Variable*/
+    /*border radius para que tome la forma redondeada*/
+    border-radius: 8px;
+    /*para que se ponga mas grande el texto*/
+    font-weight: 500;
+    margin: 0px 20px;
+    /*esta transicion es para cuando pasemos el cursor por el boton , el color que le estamos asignando abajo no aparezca tan brusco*/
+    transition: all 300ms;
+}
+
+.btn_quote:hover{
+    color: white;
+    background: var(--main_color-primary); /*Variable*/
+}
+
+/*LINEA DE REDES SOCIALES*/
+
+.menu .socialMedia {
+    margin: 0px 10px ;
+}
+
+/*esta es la separacion de cada uno de los iconos de las imagenes*/
+.menu .socialMedia a{
+    margin: 0px 4px;
+}
+
+/*aca estamos cambiando el tamaño de las imagenes de los iconos*/
+.menu .socialMedia img{
+    width: 20px;
+}
+
+
+/*PORTADA DE INICIO*/
+
+.container__cover{
+    /*100px para que tenga una separacion con la parte de arriba*/
+    padding-top: 100px;
+    /*parte de abajo*/
+    padding-bottom: 100px;
+    background: var(--main_color-secundary);
+}
+
+.cover{
+    max-width: 1200px;
+    /*para que se centre*/
+    margin: auto;
+    margin-top: 100px;
+    /*para que el texto se ponga del lazo izquierdo y la imagen en el derecho*/
+    display: flex;
+    /*para que el contenido se mantenga centrado*/
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.text__cover{
+    /*para que tenga el ancho max del padre*/
+    width: 100%;
+    /*para que tenga un espaciado con la imagen*/
+    padding-right: 150px;
+}
+
+/*titulo*/
+
+.text__cover h1{
+    font-size: 50px;
+    color: var(--color_text-secundary);
+}
+
+/*Parrafo*/
+
+.text__cover p{
+    font-size: var(--text_paragraph);
+    margin-top: 40px;
+    color: var(--color_text-terciary);
+}
+
+/*Boton*/
+
+.btn__text{
+    /*se  convierte en un bloque porque se esta utilizando una etiqueta a*/
+    display: block;
+    width: 150px;
+    /*este margin es para que se despegue del parrafo*/
+    margin-top: 40px;
+    padding: 10px 20px;
+    /*este text align es para que el texto se ponga en el medio del boton*/
+    text-align: center;
+    font-weight: 500;
+    background: var(--main_color-primary);
+    color: white;
+    border-radius: 8px;
+    /*efecto de cursos que tenga un borde*/
+    border: 2px solid transparent;
+    /*para que nos ponga una manita cuando psemos el cursor*/
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+/*seudoclase hover*/
+
+.btn__text:hover{
+    background: transparent;
+    border: 2px solid var(--main_color-primary);
+    color: var(--color_text-primary);
+}
+
+/*Tamaño de imagen*/
+
+.image__cover{
+    width: 100%;
+}
+
+.image__cover img{
+    width: 550px;
+}
+
+/*Estilos Generales CARDS*/
+/*Segunda parte*/
+
+.container__card-primary{
+    padding-top: 100px;
+}
+
+.card__primary{
+    /*para sewguir las reglas de las lineas del menu*/
+    max-width: 1200px;
+    margin: auto;
+    /*para que centre todo el texto*/
+    text-align: center;
+    /*arriba y abajo / izquierda - derecha*/
+    padding: 0px 20px;
+}
+
+/*este es el contenedor del H1 y el p*/
+.text__card-primary{
+    max-width: 800px;
+    margin: auto;
+}
+
+.text__card-primary p{
+    color: var(--color_text-primary);
+    letter-spacing: 4px;
+    font-size: var(--text_paragraph);
+    /*para el grosor */
+    font-weight: 500;
+}
+
+.text__card-primary h1{
+    font-size: var(--text_size_title);
+    /*para que se ponga un poco mas fino el texto*/
+    font-weight: 600;
+    color: var(--color_text-secundary);
+}
+
+.container__box-cardPrimary{
+    /*para las cartas , el tamaño y movimiento*/
+    /*para que se pomga uno al lado del otro*/
+    display: flex;
+    /*este flex wrap es para cuando se le aplique responsive y se achique la pag, las cartas pasen de horizontal a vertical*/
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/*esto es para las cajas de las cartas, es decir, el espacio que ocupa la carta en si*/
+.box__card-primary{
+    max-width: 350px;
+    padding: 60px 40px;
+    /*el borde que rodea la carta*/
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    /*este es el espacio entre cada carta*/
+    margin: 14px;
+    transition: all 300ms;
+}
+
+/*evento hover*/
+
+.box__card-primary:hover{
+    /*esto es para cuando yo pase el cursor, que me elimine el borde pero que me le agregue un box shadow que es una sombra pero como lo hace de manera muy brusca le ponemos una transicion arriba*/
+    border: 5px solid transparent;
+    box-shadow: var(--box_shadow-primary);
+}
+
+.box__card-primary h2{
+    font-size: var(--text_title_card);
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+/*el texto de las cartas*/
+
+.box__card-primary p{
+    /*un martgin top de 20 para la separacion*/
+    margin-top: 20px;
+}
+
+
+
+/*SECCION SOBRE NOSOTROS*/
+
+.container__about{
+    padding: 100px 0px;
+    background: var(--background-color);
+    margin-top: 100px;
+}
+
+/*centrar todo el contenido*/
+
+/*este es el padre*/
+.about{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text__about{
+    width: 100%;
+    padding-right: 40px;
+}
+
+.text__about h1{
+    color: var(--color_text-secundary);
+    font-weight: 600;
+}
+
+.text__about p{
+    font-size: var(--text_paragraph);
+    margin-top: 40px;
+    color: var(--color_text-terciary);
+}
+
+.image__about{
+    width: 100%;
+    display: flex;
+}
+
+.image__about img{
+    width: 300px;
+    /*este es el espaciado entre las imagenes*/
+    margin: 20px;
+    /*esto es el borde redondeado de las imagenes*/
+    border-radius: 200px;
+}
+
+/*SERVICIOS*/
+
+.card__services img{
+    width: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-color: rgb(193, 231, 250);
+    background-size: cover;
+}
+
+.container__footer{
+    display: flex;
+    /*el flex wrap es para que las columnas se pongan una arriba de la otra cuando se ponga pequeña la pag*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.box__footer .log{
+    width: 180px;
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    height: 1px;
+    background-color: #7a7a7a;
+}
