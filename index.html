@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Mordern - Clean Services </title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+</head>
+<body>
+    
+    <!--Header - Menu-->
+
+    <!--Logo & Nombre-->
+
+    <header>
+        <div class="container__header">
+            <div class="logo"> CLEAN SERVICES
+                <a href="#">
+                    <!--falta enrutar el logo porque aun no esta en la carpetan y ademas no  va con la estetica -->
+                    <img src="assets/Img/Logo/" alt="">
+                </a>
+            </div>
+            
+            <!--Aqui Creamos otro Div contenedor que es para el menu -->
+
+            <div class="menu">
+                <!--Nav para de barra de navegacion -->
+                <nav>
+                    <!--ul de lista desordenada-->
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Servicio</a></li>
+                        <!-- <li><a href="#">Obras</a></li> -->
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <!--Creando boton de contacto-->
+                <!--quote porque significa cotizar-->
+
+                <a href="#" class="btn_quote">Cotizar</a>
+
+                <!--Opciones de redes sociales, creamos un contenedor-->
+
+                <div class="socialMedia">
+                    <a href="#">
+                        <img src="assets/Img/Social Media/icons8-whatsapp.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/Img/Social Media/icons8-instagram.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/Img/Social Media/icons8-facebook.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/Img/Social Media/icons8-youtube.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--El contenido de la pagina va a estar contenida en el main ya que es una etiqueta principal, exepto el futter-->
+
+    <main>
+        <!--INICIO-->
+        <!--Portada de Inicio-->
+        <!--Cover porque portada en ingles es cover-->
+        <!--Ademas creamos una clase div__offset que realmente es una id que sirve para que las opciones de la portada se desplazen -->
+
+        <div class="container__cover div__offset">
+            <!--Cover va a servir para dividir el contenido-->
+            <div class="cover">
+                <section class="text__cover">
+                    <h1>Soluciones de Limpieza Profesionales para Tu Hogar y Empresa</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius excepturi possimus dolorem quas, magni reiciendis quidem cupiditate perferendis id, voluptates at voluptatum, quae in! Deleniti inventore incidunt adipisci tempore! Nam!
+                    </p>
+                    <a href="#" class="btn__text-cover  btn__text" >Empezar</a>
+                </section>
+                <section class="image__cover">
+                    <!--Falta redireccionar imagen-->
+                    <img src="assets/Img/Cover/web-development-8734249_1280.png" alt="">
+                </section>
+            </div>
+        </div>
+
+        <!--Generador de Confianza-->
+        <!--Aca creamos dos clases para modificarlas mejor en el css-->
+        <!--text card primary es la clase general para todos los textos que vayamos a reutilizar-->
+
+        <div class="container__trust container__card-primary">
+            <div class="trust card__primary">
+                <!--contenedor del texto-->
+                <div class="text__trust text__card-primary">
+                    <p>GENERA CONFIANZA PRIMERO</p>
+                    <h1>Controla tu negocio con un solo toque</h1>
+                </div>
+                <div class="comtainer__trust container__box-cardPrimary">
+                    <div class="card__trust box__card-primary">
+                        <!--Falta redireccionar las imagenes-->
+                        <img src="assets/Img/Trust Area/icons8-ancla-50.png" alt="">
+                        <h2>Control Empresarial Completo</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dicta saepe natus facere ea doloribus, excepturi numquam! Obcaecati consequuntur cupiditate ipsa quas, labore deserunt repudiandae consequatur delectus impedit, accusamus dignissimos?</p>
+                    </div>
+                    <div class="card__trust box__card-primary">
+                        <img src="assets/Img/Trust Area/icons8-letra-pequeña-50.png" alt="">
+                        <h2>Informes y analisis</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dicta saepe natus facere ea doloribus, excepturi numquam! Obcaecati consequuntur cupiditate ipsa quas, labore deserunt repudiandae consequatur delectus impedit, accusamus dignissimos?</p>
+                    </div>
+                    <div class="card__trust box__card-primary">
+                        <img src="assets/Img/Trust Area/icons8-usuario-30.png" alt="">
+                        <h2>Satisfaccion del usuario</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In dicta saepe natus facere ea doloribus, excepturi numquam! Obcaecati consequuntur cupiditate ipsa quas, labore deserunt repudiandae consequatur delectus impedit, accusamus dignissimos?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--SOBRE NOSOTROS - Nuestro Equipo-->
+        <!--el div offset es para identificar la cabeza del contenedor , ya esto es con Js-->
+
+        <div class="container__about div__offset">
+            <div class="about">
+                <div class="text__about">
+                    <h1>El quipo mas Creativo e innovador</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores dolorum quod architecto labore accusantium! Temporibus assumenda illum aperiam fugit ad molestias, eos odio sint vero beatae nesciunt quia autem quo.</p>
+                    <!--se le coloca la clase btn__text para que coja los datos del css del primer boton y asi no tenemos que darle estilos nuevamente, asi se reutiliza-->
+                    <a href="#" class="btn__text-about btn__text">Saber Más</a>
+                </div>
+                <div class="image__about">
+                    <!--falta enrutar las imagenes-->
+                    <!--aca creamos el contenedor de la imagen-->
+                    <img src="assets/Img/about/img_aspiradora_alfom.jpg" alt="">
+                    <img src="assets/Img/about/limpieza.jpg" alt="">
+                </div>
+            </div>
+            
+        </div>
+
+        <!--SERVICIOS-->
+        <!--Aca vamos a reutilizar codigo, llamando a las clases de las cards para que hereden los mismos datos y asi no codear nuevamente en el css-->
+
+        <div class="container__service container__card-primary div__offset">
+            <div class="service card__primary">
+                <div class="text__service text__card-primary">
+                    <p>QUE HACEMOS</p>
+                    <h1>Servicio para resolver cualquier tipo de problema Empresarial</h1>
+                </div>
+
+                <!--Aca vamos a trabajar con el contenedor de las Card-->
+
+                <div class="container__card-service container__box-cardPrimary">
+                    <div class="card__service box__card-primary">
+                        <img src="assets/Img/Services/icons8-alfombra-80.png" alt="">
+                        <h2>Control empresarial completo</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ipsa? Delectus a sunt commodi quas perspiciatis, porro, doloribus reprehenderit quasi odit nemo dolorum est repudiandae labore. In maiores sapiente omnis.</p>
+                        <a href="#">
+                            <img src="assets/Img/svg/icons8-flecha-derecha-50.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card__service box__card-primary">
+                        <img src="assets/Img/Services/icons8-aspiradora-48.png" alt="">
+                        <h2>Control empresarial completo</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ipsa? Delectus a sunt commodi quas perspiciatis, porro, doloribus reprehenderit quasi odit nemo dolorum est repudiandae labore. In maiores sapiente omnis.</p>
+                        <a href="#">
+                            <img src="assets/Img/svg/icons8-flecha-derecha-50.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card__service box__card-primary">
+                        <img src="assets/Img/Services/icons8-guantes-de-goma-48.png" alt="">
+                        <h2>Control empresarial completo</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ipsa? Delectus a sunt commodi quas perspiciatis, porro, doloribus reprehenderit quasi odit nemo dolorum est repudiandae labore. In maiores sapiente omnis.</p>
+                        <a href="#">
+                            <img src="assets/Img/svg/icons8-flecha-derecha-50.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card__service box__card-primary">
+                        <img src="assets/Img/Services/icons8-interior-del-dormitorio-50.png" alt="">
+                        <h2>Control empresarial completo</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ipsa? Delectus a sunt commodi quas perspiciatis, porro, doloribus reprehenderit quasi odit nemo dolorum est repudiandae labore. In maiores sapiente omnis.</p>
+                        <a href="#">
+                            <img src="assets/Img/svg/icons8-flecha-derecha-50.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card__service box__card-primary">
+                        <img src="assets/Img/Services/icons8-polaco-24.png" alt="">
+                        <h2>Control empresarial completo</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ipsa? Delectus a sunt commodi quas perspiciatis, porro, doloribus reprehenderit quasi odit nemo dolorum est repudiandae labore. In maiores sapiente omnis.</p>
+                        <a href="#">
+                            <img src="assets/Img/svg/icons8-flecha-derecha-50.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card__service box__card-primary">
+                        <img src="assets/Img/Services/icons8-alfombra-80.png" alt="">
+                        <h2>Control empresarial completo</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ipsa? Delectus a sunt commodi quas perspiciatis, porro, doloribus reprehenderit quasi odit nemo dolorum est repudiandae labore. In maiores sapiente omnis.</p>
+                        <a href="#">
+                            <img src="assets/Img/svg/icons8-flecha-derecha-50.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+    <!--FOOTER-->
+    
+    <footer>
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo"> CLEAN SERVICES
+                    <img src="" alt="">
+                </div>
+                <div class="terms">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vel laborum temporibus exercitationem. Laborum, expedita vitae dolorum error id totam possimus quisquam eaque ab impedit molestias rerum minus ipsam eum.</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Soluciones</h2>
+                <a href="#">App Desarrollo</a>
+                <a href="#">App Marketing</a>
+                <a href="#">IOS Desarrollo</a>
+                <a href="#">Android Desarrollo</a>
+            </div>
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="#">Acerca de</a>
+                <a href="#">Trabajos</a>
+                <a href="#">Procesos</a>
+                <a href="#">Servicios</a>
+            </div>
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="#"><img class="fab" src="assets/Img/Social Media/" alt="">Whatsapp</a>
+                <a href="#"><img src="assets/Img/Social Media/" alt="">Facebook</a>
+                <a href="#"><img src="assets/Img/Social Media/" alt="">Instagram</a>
+                <a href="#"><img src="assets/Img/Social Media/" alt="">Youtube</a>
+            </div>
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados 2024<b>Clean Services</b></p>
+        </div>
+    </footer>
+</body>
+</html>
