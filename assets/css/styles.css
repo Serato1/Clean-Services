@@ -115,6 +115,7 @@ header.scroller{ /*CHATGPT*/
 
 .menu nav ul{
     display: flex;
+    /*s*/
 }
 
 /*esto es para quitarle los puntos al apartado de lista o items */
